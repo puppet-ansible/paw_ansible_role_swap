@@ -1,0 +1,8 @@
+---
+paw_ansible_role_swap::swap_file_path: "/swapfile"
+paw_ansible_role_swap::swap_file_size_mb: '512'
+paw_ansible_role_swap::swap_swappiness: '60'
+paw_ansible_role_swap::swap_file_state: present
+paw_ansible_role_swap::swap_file_create_command: dd if=/dev/zero of={{ swap_file_path
+  }} bs=1M count={{ swap_file_size_mb }}
+paw_ansible_role_swap::swap_test_mode: false
